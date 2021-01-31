@@ -263,6 +263,17 @@ public static class UIElementsExtension
 		self.style.fontSize = c;
 	}
 
+	public static void SetFontSize(float v, LengthUnit v2)
+	{
+		var ve = new VisualElement();
+		var c = ve.style.fontSize;
+		var c2 = c.value;
+		c2.value = 12;
+		c2.unit = LengthUnit.Percent;
+		c.value = c2;
+		ve.style.fontSize = c;
+	}
+
 	public static void SetTextWrap(this VisualElement self, WhiteSpace v)
 	{
 		var c = self.style.whiteSpace;
